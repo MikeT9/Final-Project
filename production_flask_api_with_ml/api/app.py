@@ -37,7 +37,7 @@ def hello_world():
 
 @app.route("/")
 def home():
-    return render_template("templates/index.html")
+    return render_template("index.html")
 
 @app.route("/predict/Red/White/FixedAcidity/VolatileAcidity/CitricAcid/ResidualSugar/Chlorides/FreeSulfurDioxide/TotalSulfurDioxide/Density/pH/Sulphates/Alcohol")
 def predict(Red,White,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol):
