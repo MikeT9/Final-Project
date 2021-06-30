@@ -37,11 +37,11 @@ def hello_world():
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("templates/index.html")
 
-@app.route("/predict/<Pregnancies>/<Glucose>/<BloodPressure>/<SkinThickness>/<Insulin>/<BMI>/<DiabetesPedigreeFunction>/<Age>")
-def predict(Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age):
-    new_data = np.array([[Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age]])
+@app.route("/predict/Red/White/FixedAcidity/VolatileAcidity/CitricAcid/ResidualSugar/Chlorides/FreeSulfurDioxide/TotalSulfurDioxide/Density/pH/Sulphates/Alcohol")
+def predict(Red,White,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol):
+    new_data = np.array([[Red,White,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol]])
     return jsonify(model.predict(X_scaler.transform(new_data))[0])
 
 
