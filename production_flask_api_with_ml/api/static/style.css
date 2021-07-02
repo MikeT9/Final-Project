@@ -71,11 +71,39 @@ body {
   color: white;
 }
 
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: transparent;
+
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #ebebeb;
+  background-color: #B76E79;
+}
+
+.nav-link {
+  color: #ebebeb;
+  float: left;
+  padding: 9.5px 50px;
+  font-size: 17px;
+  font: 'Montserrat';
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
 /* Adding styles to the aside and filter form */
 .ufo-form {
   margin-top: 50px;
-
 }
+
 .filters .panel-body {
   /* padding: 10px 15px; */
   border: 10px 15px;
