@@ -45,14 +45,15 @@ def home():
 def predict(Color,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol):
     if Color == "red":
         new_data = np.array([[FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol]])
-        print(jsonify(Rmodel.predict(RX_scaler.transform(new_data))[0]))
-        return jsonify(Rmodel.predict(RX_scaler.transform(new_data))[0])
-        # print(Color)
-        # return jsonify(Color)
+        app.logger.info(Rmodel.predict(RX_scaler.transform(new_data))[0])
+        result = str(Rmodel.predict(RX_scaler.transform(new_data))[0])
+        return jsonify(result)
+
     else:
         new_data = np.array([[FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol]])
-        print(jsonify(Wmodel.predict(WX_scaler.transform(new_data))[0]))
-        return jsonify(Wmodel.predict(WX_scaler.transform(new_data))[0])
+        app.logger.info(Wmodel.predict(WX_scaler.transform(new_data))[0])
+        result = str(Wmodel.predict(WX_scaler.transform(new_data))[0])
+        return jsonify(result)
         # print(Color)
         # return jsonify(Color)
 
@@ -83,4 +84,4 @@ def predict(Color,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chloride
 #     return jsonify({"acc":acc,})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
