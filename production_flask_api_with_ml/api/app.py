@@ -37,9 +37,17 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, Worldz!'
 
-@app.route("/")
+@app.route("/home")
 def home():
     return render_template("index.html")
+
+@app.route("/charts")
+def charts():
+    return render_template("charts.html")
+
+@app.route("/data")
+def data():
+    return render_template("data.html")
 
 @app.route("/predict/<Color>/<FixedAcidity>/<VolatileAcidity>/<CitricAcid>/<ResidualSugar>/<Chlorides>/<FreeSulfurDioxide>/<TotalSulfurDioxide>/<Density>/<pH>/<Sulphates>/<Alcohol>")
 def predict(Color,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol):
