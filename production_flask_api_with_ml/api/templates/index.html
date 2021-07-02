@@ -21,8 +21,9 @@
           <a class="navbar-brand" href="index.html">Wine Quality Predictor
             <img class="nav-ufo" src="../static/images/wine-svg-13-removebg-preview.png"> 
           </a>
+          <a class="nav-link" href="charts.html">Charts</a>
+          <a class="nav-link" href="data.html">Data</a>
         </div>
-      </div>
     </nav>
     <div class="hero text-left">
       <h1>Qualità Del Vino</h1>
@@ -37,9 +38,19 @@
               <div class="panel-body">
                 <form id="form">
                   <p>Select type of wine:</p>
-                  <input type="radio" id="red" name="wine" value="1">
+                  <!-- <li class="panel-body dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" >White</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" >Red</a>
+                    </div>
+                  </li> -->
+                  <input type="radio" id="red" name="group-stack" value="Red" checked>
                   <label for="red">Red</label><br>
-                  <input type="radio" id="white" name="wine" value="0">
+                  <input type="radio" id="white" name="group-stack" value="White">
                   <label for="white">White</label><br>
 
                   <label for="fixedAcidity">Fixed Acidity:</label><br>
@@ -84,7 +95,13 @@
     </footer>
   </div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+<<<<<<< HEAD
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+ 
+=======
   <script src="../static/index.js"></script>
+>>>>>>> 0a8834fe35a8bd4ae0692885acd764dd1fe8eaf6
 </body>
 
 </html>
