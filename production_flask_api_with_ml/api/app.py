@@ -26,8 +26,10 @@ from sklearn.ensemble import RandomForestClassifier
 #     engine=sqlalchemy.create_engine('sqlite:///data.db')
 
 
-model = load(open('model.pkl', 'rb'))
-X_scaler = load(open('scaler.pkl', 'rb'))
+Rmodel = load(open('Rmodel.pkl', 'rb'))
+Wmodel = load(open('Wmodel.pkl', 'rb'))
+RX_scaler = load(open('Rscaler.pkl', 'rb'))
+WX_scaler = load(open('Wscaler.pkl', 'rb'))
 app = Flask(__name__)
 
 
@@ -39,11 +41,21 @@ def hello_world():
 def home():
     return render_template("index.html")
 
-@app.route("/predict/<Red>/<White>/<FixedAcidity>/<VolatileAcidity>/<CitricAcid>/<ResidualSugar>/<Chlorides>/<FreeSulfurDioxide>/<TotalSulfurDioxide>/<Density>/<pH>/<Sulphates>/<Alcohol>")
-def predict(Red,White,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol):
-    new_data = np.array([[Red,White,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol]])
-    print(jsonify(model.predict(X_scaler.transform(new_data))[0]))
-    return jsonify(model.predict(X_scaler.transform(new_data))[0])
+@app.route("/predict/<Color>/<FixedAcidity>/<VolatileAcidity>/<CitricAcid>/<ResidualSugar>/<Chlorides>/<FreeSulfurDioxide>/<TotalSulfurDioxide>/<Density>/<pH>/<Sulphates>/<Alcohol>")
+def predict(Color,FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol):
+    if Color == "red":
+        new_data = np.array([[FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol]])
+        print(jsonify(Rmodel.predict(RX_scaler.transform(new_data))[0]))
+        return jsonify(Rmodel.predict(RX_scaler.transform(new_data))[0])
+        # print(Color)
+        # return jsonify(Color)
+    else:
+        new_data = np.array([[FixedAcidity,VolatileAcidity,CitricAcid,ResidualSugar,Chlorides,FreeSulfurDioxide,TotalSulfurDioxide,Density,pH,Sulphates,Alcohol]])
+        print(jsonify(Wmodel.predict(WX_scaler.transform(new_data))[0]))
+        return jsonify(Wmodel.predict(WX_scaler.transform(new_data))[0])
+        # print(Color)
+        # return jsonify(Color)
+
 
 
 # @app.route("/add/<Pregnancies>/<Glucose>/<BloodPressure>/<SkinThickness>/<Insulin>/<BMI>/<DiabetesPedigreeFunction>/<Age>/<Outcome>")
