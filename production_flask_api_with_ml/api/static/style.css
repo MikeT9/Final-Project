@@ -361,7 +361,7 @@ table>thead>tr>th, .table>thead>tr>th, table>tbody>tr>th, .table>tbody>tr>th, ta
   .hero h1 {
     animation: smaller-title 1.2s forwards linear;
   }
-}
+
 
 /* keyframe animations which will be used to animate the title */
 @keyframes title {
