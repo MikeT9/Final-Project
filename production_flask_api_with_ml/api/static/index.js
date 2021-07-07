@@ -26,7 +26,7 @@ function runEnter() {
     var Sulphates = d3.select("#sulphates").property("value");
     var Alcohol = d3.select("#alcohol").property("value");
     d3.json(`/predict/${Color}/${FixedAcidity}/${VolatileAcidity}/${CitricAcid}/${ResidualSugar}/${Chlorides}/${FreeSulfurDioxide}/${TotalSulfurDioxide}/${Density}/${pH}/${Sulphates}/${Alcohol}`).then(d => {
-        d3.select("#result").text(`the model predicts your wine quality: ${d}`);
+        d3.select("#result").text(`The model predicts your wine quality: ${d}`);
         predictedResult = d;
         console.log(d);
         console.log(`/predict/${Color}/${FixedAcidity}/${VolatileAcidity}/${CitricAcid}/${ResidualSugar}/${Chlorides}/${FreeSulfurDioxide}/${TotalSulfurDioxide}/${Density}/${pH}/${Sulphates}/${Alcohol}`)

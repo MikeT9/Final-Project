@@ -144,11 +144,12 @@ input[type="text" i] {
   color: #972a2a;
   background-color: white;
   border: 0px;
-  padding: 1px 2px;
+  padding: 1px 2px 1px 2px;
   padding-top: 1px;
   padding-right: 2px;
   padding-bottom: 1px;
   padding-left: 2px;
+  max-width: 100%;
 }
 
 input[type="submit" i] {
@@ -156,11 +157,12 @@ input[type="submit" i] {
   background-color: white;
   border: 0px;
   text-align: center;
-  padding: 1px 2px;
+  /* padding: 1px 2px; */
   padding-top: 1px;
   padding-right: 2px;
   padding-bottom: 1px;
   padding-left: 2px;
+  margin-left: 50px;
 
 }
 
@@ -174,6 +176,11 @@ select {
   padding: 8px;
   color: #a89195;
   outline: none;
+}
+
+#result {
+  padding-top: 20px;
+  /* padding-right: 10%; */
 }
 
 #table-area th {
