@@ -9,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
   color: white;
+  background-color: #B76E79;
 }
 
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
@@ -253,8 +254,62 @@ select {
   color: #B76E79;
 }
 
+.table thead th {
+  border-bottom: 2px solid #dee2e6;
+  background-color: #a89195;
+  display: table-header-group;
+  vertical-align: middle;
+  font-weight: 100;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+table {
+  border-collapse: collapse;
+  padding: 12px ;
+  width:100%;
+  border-top: 1px solid #dee2e6;
+
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: center ;
+  padding: 12px ;
+  border-bottom: 2px solid #dee2e6;
+
+}
+
+.table td, .table th {
+  vertical-align: top;
+  padding: 12px ;
+
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  padding: 12px ;
+  text-align: center;
+  border-top: 1px solid #dee2e6;
+
+
+}
+
+table>thead>tr>th, .table>thead>tr>th, table>tbody>tr>th, .table>tbody>tr>th, table>tfoot>tr>th, .table>tfoot>tr>th, table>thead>tr>td, .table>thead>tr>td, table>tbody>tr>td, .table>tbody>tr>td, table>tfoot>tr>td, .table>tfoot>tr>td {
+  border-top-color: white;
+
+}
+
+
 /* media queries which will only be activated at specific screen sizes */
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   #table-area td {
     font-size: 1em;
   }
@@ -262,7 +317,8 @@ select {
 
 @media (max-width: 500px) {
   #table-area thead {
-    display: none;
+    display: table-cell;
+
   }
 
   #table-area tr td:first-child {
@@ -273,6 +329,7 @@ select {
 
   #table-area tr td:last-child {
     margin-bottom: 20px;
+
   }
 
   #table-area tr td:last-child::after {
@@ -299,7 +356,7 @@ select {
     font-weight: bold;
     text-align: center;
     content: attr(data-th);
-  }
+  } */
 
   .hero h1 {
     animation: smaller-title 1.2s forwards linear;
