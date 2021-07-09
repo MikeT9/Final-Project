@@ -32,7 +32,7 @@ Tableau was used to analyze for trends within the data.
 
 ![Charts](images/3.png)
 
-Flask was used to bring the information together. 
-HTML was used to create the displays. 
-CSS and Bootstrap were used to style the data. 
-AWS was used to publish the site.
+- Flask was used to bring the information together. 
+- HTML was used to create the displays. 
+- CSS and Bootstrap were used to style the data. 
+- AWS was used to publish the site.
