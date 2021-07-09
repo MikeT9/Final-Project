@@ -17,6 +17,8 @@ All wine in our dataset were labeled with a quality rating from 1-10 and the fol
 - sulphates	
 - alcohol	
 
+![Landing page large screen](images/1.png)
+![Landing page large screen](images/2.png)
 
 ## MACHINE LEARNING
 
