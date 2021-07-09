@@ -1,5 +1,4 @@
-# Final-Project
-# Wine Quality Predicter
+# Final-Project: Wine Quality Predicter
 ## By Erin O'Brien, Fatima Shami, Lydia Jones, Michael Thomas
 
 The goal of this project was to explore the possibility of predicting wine quality using chemical characteristics and machine learning.
