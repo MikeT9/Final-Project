@@ -1,7 +1,6 @@
 import requests
 
-from flask import Flask, json
-from flask import jsonify, render_template
+from flask import Flask, json, redirect, jsonify, render_template
 import datetime as dt
 import os
 import pandas as pd
@@ -33,9 +32,9 @@ WX_scaler = load(open('Wscaler.pkl', 'rb'))
 app = Flask(__name__)
 
 
-@app.route('/hello')
+@app.route('/')
 def hello_world():
-    return 'Hello, Worldz!'
+    return redirect("/home")
 
 @app.route("/home")
 def home():
