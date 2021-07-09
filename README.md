@@ -23,7 +23,7 @@ All wine in our dataset were labeled with a quality rating from 1-10 and the fol
 
 ## MACHINE LEARNING
 
-We created two machine learning models for red and white wine. Using random forest and linear regression. It was found that random forest fulfilled the project’s needs much better than linear regression. The ability to add new data to the training set was disabled as it could corrupt the overall profile of the original model data.
+We created two machine learning models for red and white wine. Using random forest and linear regression. It was found that random forest fulfilled the project’s needs much better than linear regression. The ability to add new data to the training set was disabled as it could corrupt the overall profile of the original model data. The accuracy of our model was the 69%.
 
 The user can input characteristics of the wine, and our predictor will push out a quality rating for your wine!
 ![Landing page large screen](images/1.png)
