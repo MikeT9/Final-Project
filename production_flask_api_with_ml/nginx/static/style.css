@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+  /* font-family: futura-lt-w01-book,sans-serif; */
+  font-family: 'Montserrat', sans-serif;}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  background-color: #B76E79;
+}
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 130px;
+  overflow: auto;
+  background: #B76E79
+}
+
+.container {
+  z-index: 1;
+} 
+
+/* The footer is positioned at the bottom of the page */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100px;
+  background: #D3A8AE;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+
+/* The code styles the text at the bottom of the footer */
+.footer > .bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  background: #B76E79;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+
+.nav  {
+  margin: 0px;
+  /* padding: 20px; */
+  background: #B76E79;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+  z-index: 1;
+}
+
+.container-fluid {
+  padding: 20px;
+  margin: 0;
+  background: #B76E79;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%)
+}
+
+/* This CSS styles the wine icon in the navbar */
+.nav-ufo {
+  position: absolute;
+  top: 10px;
+  bottom: 5px;
+  left: 240px !important;
+  width: 35px;
+  color: white;
+}
+
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: transparent;
+
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #ebebeb;
+  background-color: #B76E79;
+}
+
+.nav-link {
+  color: #ebebeb;
+  float: left;
+  padding: 9.5px 50px;
+  font-size: 17px;
+  font: 'Montserrat';
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+/* Adding styles to the aside and filter form */
+.ufo-form {
+  margin-top: 50px;
+}
+
+.filters .panel-body {
+  /* padding: 10px 15px; */
+  border: 10px 15px;
+
+  background-color: #D3A8AE;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+}
+
+.filters .panel-heading {
+  padding: 4;
+  /* text-align: center; */
+  background-color: #972a2a;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.filters .panel-default {
+  background-color: transparent;
+}
+.filters {
+  margin-top: 10px;
+  width: 197px;
+  background-color: #B76E79;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+  border: 10px 15px;
+  /* border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
+  border-radius: 20px;
+  padding: 0px;
+  border-color: #B76E79;
+}
+
+
+input[type="text" i] {
+  color: #972a2a;
+  background-color: white;
+  border: 0px;
+  padding: 1px 2px 1px 2px;
+  padding-top: 1px;
+  padding-right: 2px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  max-width: 100%;
+}
+
+input[type="submit" i] {
+  color: #972a2a;
+  background-color: white;
+  border: 0px;
+  text-align: center;
+  /* padding: 1px 2px; */
+  padding-top: 1px;
+  padding-right: 2px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  margin-left: 50px;
+
+}
+
+input[type="radio" i] {
+  border: 0px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  color: #a89195;
+  outline: none;
+}
+
+#result {
+  padding-top: 20px;
+  /* padding-right: 10%; */
+}
+
+#table-area th {
+  text-align: center;
+}
+
+#table-area th:first-child,
+#table-area th:nth-child(2),
+#table-area th:nth-child(6) {
+  min-width: 70px;
+}
+
+.loader {
+  margin-top: 50px;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+/* The styles for the parallax */
+.hero {
+  position: relative;
+  height: 550px;
+  margin: 20;
+  padding-top: 200px;
+  background: black;
+  background-image: url("images/R5612523139523e2ea03c462f8ab2feab.jpg");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+  /* normal normal normal 16px/1.4em raleway,sans-serif  */
+}
+
+.hero h1 {
+  padding: 200px 0px 100px 100px;
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 100px;
+  font-size: 0.1rem;
+  animation: title 1.2s forwards linear;
+}
+
+.hero p {
+  margin-left: 100px;
+  font-size: 2rem;
+  opacity: 0;
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 1.2s;
+}
+
+/* input placeholder color changes */
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #B76E79;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #B76E79;
+}
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #B76E79;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #B76E79;
+}
+
+.table thead th {
+  border-bottom: 2px solid #dee2e6;
+  background-color: #a89195;
+  display: table-header-group;
+  vertical-align: middle;
+  font-weight: 100;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+table {
+  border-collapse: collapse;
+  padding: 12px ;
+  width:100%;
+  border-top: 1px solid #dee2e6;
+
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: center ;
+  padding: 12px ;
+  border-bottom: 2px solid #dee2e6;
+
+}
+
+.table td, .table th {
+  vertical-align: top;
+  padding: 12px ;
+
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  padding: 12px ;
+  text-align: center;
+  border-top: 1px solid #dee2e6;
+
+
+}
+
+table>thead>tr>th, .table>thead>tr>th, table>tbody>tr>th, .table>tbody>tr>th, table>tfoot>tr>th, .table>tfoot>tr>th, table>thead>tr>td, .table>thead>tr>td, table>tbody>tr>td, .table>tbody>tr>td, table>tfoot>tr>td, .table>tfoot>tr>td {
+  border-top-color: white;
+
+}
+
+
+/* media queries which will only be activated at specific screen sizes */
+/* @media (max-width: 800px) {
+  #table-area td {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  #table-area thead {
+    display: table-cell;
+
+  }
+
+  #table-area tr td:first-child {
+    font-size: 1.8em;
+    font-weight: bold;
+    background: #972a2a;
+  }
+
+  #table-area tr td:last-child {
+    margin-bottom: 20px;
+
+  }
+
+  #table-area tr td:last-child::after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    content: " ";
+    background: aliceblue;
+  }
+
+  #table-area td {
+    font-size: 1.25em;
+  }
+
+  #table-area tbody td {
+    display: block;
+    text-align: center;
+  }
+
+  #table-area tbody td::before {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    content: attr(data-th);
+  } */
+
+  .hero h1 {
+    animation: smaller-title 1.2s forwards linear;
+  }
+
+
+/* keyframe animations which will be used to animate the title */
+@keyframes title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 7.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes smaller-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 5.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+/* hi */
